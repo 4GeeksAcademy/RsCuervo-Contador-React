@@ -10,12 +10,22 @@ import '../styles/index.css'
 
 // components
 import Home from './components/Home';
+import SecondsCounter from './components/SecondsCounter';
 
-  ReactDOM.createRoot(document.getElementById('root')).render(
+
+let segundos = 0;
+setInterval(() => {
+  console.log(segundos)
+  ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-      <Home/>
-    </React.StrictMode>,
+      <Home />
+      <SecondsCounter seconds = {segundos} />
+    </React.StrictMode>
   );
+  segundos = segundos + 1;
+}, 1000);
+
+
   
 
 

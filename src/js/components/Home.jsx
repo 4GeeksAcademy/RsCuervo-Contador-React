@@ -3,10 +3,10 @@ import SecondsCounter from "./SecondsCounter";
 
 
 //create your first component
-const Home = () => {
+const Home = ({ seconds }) => {
 	return (
-		<div className="text-center">
-			<SecondsCounter />	
+		<div className="container mt-5 text-center">
+			<h1>{seconds}</h1>	
 		</div>
 	);
 };
